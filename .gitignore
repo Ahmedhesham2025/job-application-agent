@@ -1,0 +1,11 @@
+# Personal data - never commit
+.env
+config/candidate_profile.yaml
+config/learned_answers.yaml
+config/resume/
+data/
+artifacts/
+# Python
+.venv/
+__pycache__/
+*.egg-info/

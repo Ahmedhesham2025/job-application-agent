@@ -1,0 +1,237 @@
+version: 1
+
+criteria:
+  target_titles:
+    - Data Analyst
+    - Product Data Analyst
+    - Operations Data Analyst
+    - Workforce Analyst
+    - Reporting Analyst
+    - Senior Data Analyst
+    - Analytics Engineer
+    - Senior Analytics Engineer
+    - Senior Data Analyst Engineer
+    - Business Intelligence Analyst
+    - BI Analyst
+    - BI Developer
+    - Data Analytics Specialist
+  excluded_title_terms:
+    - Staff
+    - Lead
+    - Principal
+    - Director
+    - Head
+  allowed_locations:
+    - Cairo
+    - Egypt
+    - Remote
+    - EMEA
+    - Europe
+    - Netherlands
+    - Amsterdam
+    - Rotterdam
+    - Utrecht
+    - Eindhoven
+    - Germany
+    - Berlin
+    - Hamburg
+    - Spain
+    - Barcelona
+    - Milan
+    - Copenhagen
+    - Stockholm
+    - Helsinki
+    - Portugal
+    - Ireland
+    - United Kingdom
+    - London
+    - France
+    - Belgium
+    - Luxembourg
+    - Austria
+    - Switzerland
+    - Denmark
+    - Sweden
+    - Norway
+    - Finland
+    - Poland
+    - Czechia
+    - Romania
+    - Bulgaria
+    - Greece
+    - Italy
+    - Estonia
+    - Latvia
+    - Lithuania
+    - Albania
+    - Andorra
+    - Bosnia and Herzegovina
+    - Croatia
+    - Cyprus
+    - Czech Republic
+    - Hungary
+    - Iceland
+    - Kosovo
+    - Liechtenstein
+    - Malta
+    - Moldova
+    - Monaco
+    - Montenegro
+    - North Macedonia
+    - San Marino
+    - Serbia
+    - Slovakia
+    - Slovenia
+    - Ukraine
+    - United States
+    - USA
+    - Remote US
+    - New York
+    - San Francisco
+    - California
+    - Texas
+    - Austin
+    - Seattle
+    - Boston
+    - Chicago
+    - Los Angeles
+    - Washington, DC
+  home_locations:
+    - Cairo
+    - Egypt
+  require_relocation_support_for_non_remote_abroad: true
+  relocation_support_terms:
+    - relocation support
+    - relocation assistance
+    - relocation services
+    - relocation package
+    - relocation bonus
+    - visa sponsorship
+    - visa assistance
+    - sponsor your visa
+    - immigration support
+    - work permit sponsorship
+  remote_eligibility_terms:
+    - remote - emea
+    - remote emea
+    - worldwide
+    - anywhere in the world
+    - choose where you live
+    - global anywhere
+    - work from anywhere
+  required_skills:
+    - SQL
+  preferred_skills:
+    - BigQuery
+    - dbt
+    - SQL Server
+    - Python
+    - Power BI
+    - Tableau
+    - Apache Superset
+  excluded_terms:
+    - unpaid
+    - commission-only
+    - valid eu work permit is required
+    - must have work authorization
+    - must have legal working rights
+    - does not sponsor work visas
+    - no visa sponsorship
+  minimum_match_score: 75
+
+discovery:
+  # Add company-specific board tokens and explicitly enable them.
+  sources:
+    - type: greenhouse
+      token: replace-with-company-board-token
+      enabled: false
+    - type: lever
+      site: klivvr
+      enabled: true
+    - type: greenhouse
+      token: wppmedia
+      enabled: true
+    - type: greenhouse
+      token: alpaca
+      enabled: true
+    - type: greenhouse
+      token: affirm
+      enabled: true
+    - type: greenhouse
+      token: zyngacareers
+      enabled: true
+    - type: ashby
+      board: adjoe
+      enabled: true
+    - type: ashby
+      board: perk
+      enabled: true
+    - type: ashby
+      board: constructor
+      enabled: true
+    - type: ashby
+      board: gismart
+      enabled: true
+    - type: ashby
+      board: satispay
+      enabled: true
+    - type: ashby
+      board: subsets
+      enabled: true
+    - type: ashby
+      board: openai
+      enabled: true
+    - type: ashby
+      board: confido
+      enabled: true
+    - type: ashby
+      board: voodoo
+      enabled: true
+
+submission:
+  enabled: true
+  # assist = the agent fills the form in Chrome; you solve the CAPTCHA and press Submit.
+  mode: assist
+  live_submission_enabled: false
+  maximum_per_day: 5
+  daily_limit_timezone: Africa/Cairo
+  allowed_domains:
+    - jobs.lever.co
+    - job-boards.greenhouse.io
+    - boards.greenhouse.io
+    - jobs.ashbyhq.com
+  approved_resume_sha256:
+    - replace-with-sha256-of-your-cv   # python -c "import hashlib;print(hashlib.sha256(open(\'config/resume/cv.pdf\',\'rb\').read()).hexdigest())"
+  allowed_answer_categories:
+    - identity
+    - contact
+    - experience
+    - education
+    - skills
+    - availability
+    - relocation
+    - sponsorship
+    - salary
+    - work_authorization
+    - preference
+    - consent
+    - open_answer
+    # Only ever answered with "Prefer not to say" (enforced in code).
+    - demographic
+    - disability
+    - veteran_status
+  blocked_answer_categories:
+    - criminal_history
+    - legal_attestation
+    - security_clearance
+    - assessment
+    - recorded_interview
+    - unknown
+  review_triggers:
+    - captcha_present
+    - unknown_question
+    - external_redirect
+    - assessment_required
+    - recorded_interview_required
+    - login_challenge
+    - selector_changed

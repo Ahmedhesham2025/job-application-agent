@@ -1,0 +1,44 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Job Application for Analytics Engineer at Example</title>
+<script src="https://www.recaptcha.net/recaptcha/enterprise.js"></script></head>
+<body>
+<h1>Analytics Engineer</h1>
+<form id="application-form" onsubmit="event.preventDefault(); document.body.innerHTML='<h1>Thank you for applying.</h1>'">
+  <label for="first_name">First Name*</label><input id="first_name" type="text" aria-required="true">
+  <label for="last_name">Last Name*</label><input id="last_name" type="text" aria-required="true">
+  <label for="email">Email*</label><input id="email" type="text" aria-required="true">
+  <label for="phone">Phone*</label><input id="phone" type="tel" aria-required="true">
+  <div><label for="resume">Resume/CV*</label><input id="resume" type="file"></div>
+  <div><label for="cover_letter">Cover Letter</label><input id="cover_letter" type="file"></div>
+  <label for="q1">LinkedIn Profile</label><input id="q1" type="text">
+  <label for="q2">Twitter</label><input id="q2" type="text">
+
+  <div class="select"><label for="q3">Pronouns *</label>
+    <input id="q3" role="combobox" type="text" aria-required="true" class="cb">
+    <div role="listbox" hidden><div role="option">He/him</div><div role="option">She/her</div><div role="option">Prefer not to say</div></div></div>
+  <div class="select"><label for="q4">How did you first learn about Example as an employer? *</label>
+    <input id="q4" role="combobox" type="text" aria-required="true" class="cb">
+    <div role="listbox" hidden><div role="option">LinkedIn</div><div role="option">Company careers page</div><div role="option">Referral</div></div></div>
+  <div class="select"><label for="q5">Do you now or in the future require sponsorship for employment visa status?*</label>
+    <input id="q5" role="combobox" type="text" aria-required="true" class="cb">
+    <div role="listbox" hidden><div role="option">Yes</div><div role="option">No</div></div></div>
+  <div class="select"><label for="q6">Are you an EU citizen?*</label>
+    <input id="q6" role="combobox" type="text" aria-required="true" class="cb">
+    <div role="listbox" hidden><div role="option">Yes</div><div role="option">No</div></div></div>
+  <label for="q7">Have you ever been convicted of a crime?*</label>
+  <select id="q7" required><option>Select...</option><option>Yes</option><option>No</option></select>
+  <label for="q8">Why do you want to work at Example?</label><textarea id="q8"></textarea>
+  <textarea name="g-recaptcha-response" style="display:none"></textarea>
+  <button type="submit">Submit application</button>
+</form>
+<script>
+for (const cb of document.querySelectorAll('.cb')) {
+  const list = cb.parentElement.querySelector('[role=listbox]');
+  cb.addEventListener('click', () => { list.hidden = false; });
+  cb.addEventListener('keydown', e => { if (e.key === 'Escape') list.hidden = true; });
+  for (const opt of list.querySelectorAll('[role=option]')) {
+    opt.addEventListener('click', () => { cb.value = opt.textContent; cb.dataset.chosen = opt.textContent; list.hidden = true; });
+  }
+}
+</script>
+</body></html>

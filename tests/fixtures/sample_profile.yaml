@@ -1,0 +1,259 @@
+version: 1
+candidate_id: sam-example
+source_document:
+  path: sample_resume.pdf
+  sha256: ae45324d33b82a4a239a057fd3df7405ef5bad06942f31e496200a619ba178d0
+  pages: 1
+  verified_on: '2026-10-23'
+  note: Fictional sample candidate used by the tests.
+facts:
+  full_name:
+    value: Sam Example
+    verified: true
+    evidence: Sample data
+  email:
+    value: sam@example.com
+    verified: true
+    evidence: Sample data
+  phone:
+    value: +20 100 000 0000
+    verified: true
+    evidence: Sample data
+  city:
+    value: Cairo
+    verified: true
+    evidence: Sample data
+  country:
+    value: Egypt
+    verified: true
+    evidence: Sample data
+  linkedin_url:
+    value: https://linkedin.com/in/sam-example
+    verified: true
+    evidence: Sample data
+  current_title:
+    value: Senior Data Analyst
+    verified: true
+    evidence: Sample data
+  current_employer:
+    value: Example Mobility
+    verified: true
+    evidence: Sample data
+  current_role_start:
+    value: 2026-05
+    verified: true
+    evidence: Sample data
+  highest_degree:
+    value: Bachelor of Engineering, Electronics and Communication Engineering
+    verified: true
+    evidence: Sample data
+  university:
+    value: Example University
+    verified: true
+    evidence: Sample data
+  work_authorization:
+    value: Egypt only
+    verified: true
+    evidence: Sample data
+  authorized_to_work_in_egypt:
+    value: true
+    verified: true
+    evidence: Sample data
+  authorized_to_work_outside_egypt:
+    value: false
+    verified: true
+    evidence: Sample data
+  authorized_to_work_in_eu:
+    value: false
+    verified: true
+    evidence: Sample data
+  authorized_to_work_in_usa:
+    value: false
+    verified: true
+    evidence: Sample data
+  requires_sponsorship:
+    value: true
+    verified: true
+    evidence: Sample data
+  salary_expectation:
+    value: No minimum
+    verified: true
+    evidence: Sample data
+  willing_to_relocate:
+    value: true
+    verified: true
+    evidence: Sample data
+  notice_period:
+    value: 30 days
+    verified: true
+    evidence: Sample data
+  gender_identity:
+    value: Prefer not to say
+    verified: true
+    assumed: true
+    evidence: Sample data
+  disability_status:
+    value: Prefer not to say
+    verified: true
+    assumed: true
+    evidence: Sample data
+  veteran_status:
+    value: Prefer not to say
+    verified: true
+    assumed: true
+    evidence: Sample data
+  first_name:
+    value: Sam
+    verified: true
+    assumed: true
+    evidence: Sample data
+  last_name:
+    value: Example
+    verified: true
+    assumed: true
+    evidence: Sample data
+  preferred_name:
+    value: Sam
+    verified: true
+    assumed: true
+    evidence: Sample data
+  current_location:
+    value: Cairo, Egypt
+    verified: true
+    assumed: true
+    evidence: Sample data
+  citizenship:
+    value: Egyptian
+    verified: true
+    assumed: true
+    evidence: Sample data
+  eu_citizen:
+    value: false
+    verified: true
+    assumed: true
+    evidence: Sample data
+  us_citizen:
+    value: false
+    verified: true
+    assumed: true
+    evidence: Sample data
+  total_years_experience:
+    value: '5'
+    verified: true
+    assumed: true
+    evidence: Sample data
+  earliest_start:
+    value: 30 days after offer
+    verified: true
+    assumed: true
+    evidence: Sample data
+  willing_hybrid_or_onsite:
+    value: true
+    verified: true
+    assumed: true
+    evidence: Sample data
+  previously_employed_by_this_company:
+    value: false
+    verified: true
+    assumed: true
+    evidence: Sample data
+  referral_source:
+    value: Company careers page
+    verified: true
+    assumed: true
+    evidence: Sample data
+  salary_expectation_eur_yearly:
+    value: '45000'
+    verified: true
+    assumed: true
+    evidence: Sample data
+  salary_expectation_usd_yearly:
+    value: '90000'
+    verified: true
+    assumed: true
+    evidence: Sample data
+  salary_expectation_egp_monthly:
+    value: '70000'
+    verified: true
+    assumed: true
+    evidence: Sample data
+  data_consent:
+    value: checked
+    verified: true
+    assumed: true
+    evidence: Sample data
+  messaging_consent:
+    value: true
+    verified: true
+    assumed: true
+    evidence: Sample data
+  pronouns:
+    value: Prefer not to say
+    verified: true
+    assumed: true
+    evidence: Sample data
+  race_ethnicity:
+    value: Prefer not to say
+    verified: true
+    assumed: true
+    evidence: Sample data
+skills:
+  analytics_engineering:
+  - SQL
+  - BigQuery
+  - SQL Server
+  - dbt Cloud
+  - data modeling
+  - ETL/ELT
+  - partitioning
+  - validation
+  - KPI design
+  business_intelligence:
+  - Apache Superset
+  - Looker Studio
+  - Power BI
+  - Tableau
+  - Excel
+  - Power Query
+  - forecasting
+  - root-cause analysis
+  - funnel analysis
+  - pricing analysis
+  programming_and_automation:
+  - Python
+  - Pandas
+  - NumPy
+  - Google Apps Script
+  - JavaScript
+  - VBA
+  - Google Sheets
+  - workflow automation
+  data_engineering:
+  - Python ETL (SQL Server to BigQuery)
+  - Windows Task Scheduler orchestration
+  - Firebase / GA4 export to BigQuery
+  - MoEngage
+  fraud_and_risk:
+  - fraud-pattern detection in payment data
+  - fraud rule design
+  - log-only to enforce rule rollout
+  - daily monitoring and alerting
+  - incident investigation
+  - root-cause analysis
+experience:
+- employer: Example Mobility
+  title: Senior Data Analyst
+  start: 2026-05
+  end: present
+  location: Cairo, Egypt
+- employer: Example Fintech
+  title: Workforce Analyst
+  start: 2025-07
+  end: 2026-04
+verified_achievements:
+- id: trip_model
+  text: Built trip-level datasets in BigQuery and dbt.
+  evidence: Sample
+- id: fraud_rules
+  text: Monitored card-fraud rules and moved them from log-only to enforce.
+  evidence: Sample

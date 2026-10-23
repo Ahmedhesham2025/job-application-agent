@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "allowlisted-job-agent"
+version = "0.1.0"
+description = "Two-agent job discovery and application planning with a deterministic submission gate."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "anthropic>=1.0",
+  "httpx>=0.28",
+  "openai-agents",
+  "playwright>=1.48",
+  "pydantic>=2.13",
+  "python-dotenv>=1.0",
+  "PyYAML>=6.0",
+  "tzdata>=2025.2",
+]
+
+[project.scripts]
+job-agent = "job_agent.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/job_agent"]

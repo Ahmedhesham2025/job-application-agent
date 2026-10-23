@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Analytics Engineer @ Example</title></head>
+<body>
+<form onsubmit="event.preventDefault()">
+  <div class="_fieldEntry"><label for="_systemfield_resume">Resume</label><input id="_systemfield_resume" type="file" required></div>
+  <div class="_fieldEntry"><label for="_systemfield_name">Name</label><input id="_systemfield_name" name="_systemfield_name" type="text" required></div>
+  <div class="_fieldEntry"><label for="_systemfield_email">Email</label><input id="_systemfield_email" type="email" required></div>
+  <div class="_fieldEntry"><label for="ph">Phone Number</label><input id="ph" type="tel" required></div>
+
+  <div class="_fieldEntry"><label>Are you willing to work from our Milan office three days a week?</label>
+    <div><button type="button" onclick="this.dataset.on=1">Yes</button><button type="button" onclick="this.dataset.on=1">No</button></div></div>
+
+  <div class="_fieldEntry"><label for="spons">Will you now or in the future require sponsorship for employment visa status?</label>
+    <input id="spons" name="spons" type="checkbox"></div>
+
+  <fieldset><legend>Are you currently using Example?</legend>
+    <label><input type="checkbox" name="use" value="a">Online payment</label>
+    <label><input type="checkbox" name="use" value="b">Send money to a friend</label>
+    <label><input type="checkbox" name="use" value="c">I'm not a user</label></fieldset>
+
+  <div class="_fieldEntry"><label for="sal">Your Salary Expectations</label><input id="sal" type="number" required></div>
+
+  <fieldset><legend>Do you belong to a protected category or hold a disability status?</legend>
+    <label><input type="radio" name="dis" value="y">Yes</label>
+    <label><input type="radio" name="dis" value="n">No</label>
+    <label><input type="radio" name="dis" value="p">Prefer not to disclose</label></fieldset>
+
+  <div class="_fieldEntry"><label>Data processing consent</label>
+    <label><input type="checkbox" name="consent">I agree</label></div>
+
+  <button type="submit" id="go" onclick="setTimeout(()=>document.body.innerHTML='<p>Your application was sent. Thank you for applying!</p>',50)">Submit Application</button>
+</form>
+</body></html>
